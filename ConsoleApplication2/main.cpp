@@ -3,22 +3,11 @@
 #include <string>
 #include <regex>
 
+
 using namespace std;
 
-void main() 
+void main(int argc, char* argv[])
 {
-	string searchStr = "1231234";
-	string replaceStr = "a";
-	regex reg(searchStr);
-	ifstream inputFile;
-	ofstream outputFile;
- 	outputFile.open("output.txt");
-	inputFile.open("input.txt");
-	string str = "";
-	while (inputFile >> str)
-	{		
-		str = regex_replace(str, reg, replaceStr);
-		cout << str << endl;
-	}	
-	inputFile.close();
+	// inputFile outputFile search replace
+	if(argc != 3)
 }
